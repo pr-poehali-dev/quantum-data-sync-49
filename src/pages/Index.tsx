@@ -47,18 +47,50 @@ export default function Index() {
   ];
 
   const topProjects = [
-    { name: 'Level ЖК Причальный', type: 'профиль' },
-    { name: 'MR Group Павелецкая Сити', type: 'профиль' },
-    { name: 'Level ЖК Савинская 17', type: 'профиль' },
-    { name: 'Level ЖК Павелецкая', type: 'профиль' },
-    { name: 'Level ЖК Стрешнего', type: 'профиль' },
-    { name: 'Донстрой ЖК Остров 4', type: 'профиль' },
-    { name: 'Донстрой ЖК Остров 4/6', type: 'стекло' },
-    { name: 'Эталон ЖК Шагал', type: 'стекло' },
+    {
+      name: 'Level ЖК Причальный',
+      type: 'профиль',
+      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+      name: 'MR Group Павелецкая Сити',
+      type: 'профиль',
+      image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+      name: 'Level ЖК Савинская 17',
+      type: 'профиль',
+      image: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+      name: 'Level ЖК Павелецкая',
+      type: 'профиль',
+      image: 'https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+      name: 'Level ЖК Стрешнего',
+      type: 'профиль',
+      image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+      name: 'Донстрой ЖК Остров 4',
+      type: 'профиль',
+      image: 'https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+      name: 'Донстрой ЖК Остров 4/6',
+      type: 'стекло',
+      image: 'https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+      name: 'Эталон ЖК Шагал',
+      type: 'стекло',
+      image: 'https://images.unsplash.com/photo-1577979749830-f1d742b96791?auto=format&fit=crop&w=1200&q=80',
+    },
   ];
 
   return (
-    <main className="min-h-screen bg-ink text-white">
+    <main className="min-h-screen bg-ink text-neutral-300">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-ink/95 backdrop-blur border-b border-gold/30">
         <div className="container mx-auto px-4 md:px-8 py-3 flex justify-between items-center">
@@ -70,16 +102,16 @@ export default function Index() {
             </div>
           </a>
           <div className="hidden md:flex space-x-8">
-            <a href="#services" className="text-sm uppercase tracking-widest text-white/80 hover:text-gold transition-colors">
+            <a href="#services" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               Услуги
             </a>
-            <a href="#projects" className="text-sm uppercase tracking-widest text-white/80 hover:text-gold transition-colors">
+            <a href="#projects" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               Объекты
             </a>
-            <a href="#about" className="text-sm uppercase tracking-widest text-white/80 hover:text-gold transition-colors">
+            <a href="#about" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               О нас
             </a>
-            <a href="#contact" className="text-sm uppercase tracking-widest text-white/80 hover:text-gold transition-colors">
+            <a href="#contact" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               Контакты
             </a>
           </div>
@@ -107,10 +139,10 @@ export default function Index() {
                   РЕКОВЕРИ+
                 </span>
               </h1>
-              <p className="text-xl max-w-xl mb-4 text-white/90">
+              <p className="text-xl max-w-xl mb-4 text-neutral-200">
                 Специализированные работы на объектах жилого и коммерческого назначения.
               </p>
-              <p className="text-base text-white/60 max-w-xl">
+              <p className="text-base text-neutral-300 max-w-xl">
                 Реставрация светопрозрачных конструкций, алюминиевого профиля, дверей и клининг остекления — для застройщиков и частных клиентов.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -151,7 +183,7 @@ export default function Index() {
                 <div className="text-4xl md:text-5xl font-bold tracking-tighter mb-2 text-gold">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm uppercase tracking-widest text-white/60">
+                <div className="text-xs md:text-sm uppercase tracking-widest text-neutral-300">
                   {stat.label}
                 </div>
               </div>
@@ -164,7 +196,7 @@ export default function Index() {
       <section id="services" className="py-20 px-4 md:px-8 bg-ink">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12">
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter text-white">УСЛУГИ</h2>
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter text-neutral-100">УСЛУГИ</h2>
             <p className="text-sm uppercase tracking-widest text-gold mt-4 md:mt-0">
               4 направления работ
             </p>
@@ -176,15 +208,12 @@ export default function Index() {
                 <div className="flex justify-between items-start mb-6">
                   <span className="text-6xl font-bold tracking-tighter bg-gradient-to-b from-gold-light to-gold-dark bg-clip-text text-transparent">{s.num}</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 tracking-tight text-white">{s.title}</h3>
-                <p className="text-white/60 mb-4">{s.desc}</p>
-                <div className="text-xs uppercase tracking-widest text-gold">
-                  {s.meta}
-                </div>
+                <h3 className="text-2xl font-bold mb-3 tracking-tight text-neutral-100">{s.title}</h3>
+                <p className="text-neutral-300">{s.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-xs text-white/40 mt-6">
+          <p className="text-xs text-neutral-400 mt-6">
             * Стоимость обсуждается индивидуально с каждым Заказчиком.
           </p>
         </div>
@@ -194,19 +223,30 @@ export default function Index() {
       <section id="projects" className="py-20 px-4 md:px-8 bg-ink-soft">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12">
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter text-white">ОБЪЕКТЫ</h2>
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter text-neutral-100">ОБЪЕКТЫ</h2>
             <p className="text-sm uppercase tracking-widest text-gold mt-4 md:mt-0">
               Топ работ
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
             {topProjects.map((p, i) => (
-              <div key={i} className="bg-ink border border-gold/20 border-l-4 border-l-gold p-6 hover:border-gold hover:shadow-[0_0_30px_rgba(212,184,114,0.15)] transition-all">
-                <div className="text-xs uppercase tracking-widest text-gold/70 mb-1">
-                  {p.type}
+              <div key={i} className="group relative overflow-hidden bg-ink border border-gold/20 hover:border-gold hover:shadow-[0_0_30px_rgba(212,184,114,0.2)] transition-all">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent pointer-events-none" />
                 </div>
-                <div className="font-bold text-lg text-white">{p.name}</div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="text-[10px] uppercase tracking-widest text-gold mb-1">
+                    {p.type}
+                  </div>
+                  <div className="font-bold text-base leading-tight text-neutral-100">{p.name}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -216,7 +256,7 @@ export default function Index() {
             {clients.map((c, i) => (
               <div key={i} className="bg-ink p-6">
                 <div className="text-xl font-bold mb-2 text-gold">{c.name}</div>
-                <div className="text-sm text-white/60">{c.projects}</div>
+                <div className="text-sm text-neutral-300">{c.projects}</div>
               </div>
             ))}
           </div>
@@ -228,7 +268,7 @@ export default function Index() {
         <div className="container mx-auto">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-5">
-              <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-8 text-white">О НАС</h2>
+              <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-8 text-neutral-100">О НАС</h2>
               <div className="aspect-[4/5] bg-ink-soft border border-gold/20 relative mb-8 md:mb-0 flex items-center justify-center p-12">
                 <img
                   src={LOGO_URL}
@@ -238,20 +278,20 @@ export default function Index() {
               </div>
             </div>
             <div className="col-span-12 md:col-span-7 md:pt-24">
-              <p className="text-xl mb-6 text-white/90">
+              <p className="text-xl mb-6 text-neutral-200">
                 Компания РЕКОВЕРИ+ выполняет специализированные работы на объектах жилого и коммерческого назначения в Москве и Московской области.
               </p>
-              <p className="mb-6 text-white/70">
+              <p className="mb-6 text-neutral-300">
                 Работаем с топовыми застройщиками: Донстрой, Level Group, MR Group, Эталон, Гранель. Реализованы объекты на десятки тысяч метров профиля и тысячи квадратных метров остекления.
               </p>
-              <p className="mb-6 text-white/70">
+              <p className="mb-6 text-neutral-300">
                 Реставрация вместо замены — экономия бюджета объекта без потери качества. Работаем как с застройщиками на этапе сдачи, так и с управляющими компаниями и частными клиентами.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mt-12">
                 <div>
                   <h3 className="text-sm uppercase tracking-widest mb-3 text-gold">Принципы</h3>
-                  <ul className="space-y-2 text-white/80">
+                  <ul className="space-y-2 text-neutral-300">
                     <li className="flex items-start gap-2">
                       <Icon name="Check" size={16} className="mt-1 flex-shrink-0 text-gold" />
                       <span>Промышленные объёмы</span>
@@ -272,7 +312,7 @@ export default function Index() {
                 </div>
                 <div>
                   <h3 className="text-sm uppercase tracking-widest mb-3 text-gold">Клиенты</h3>
-                  <ul className="space-y-2 text-white/80">
+                  <ul className="space-y-2 text-neutral-300">
                     <li className="flex items-start gap-2">
                       <Icon name="Building2" size={16} className="mt-1 flex-shrink-0 text-gold" />
                       <span>Застройщики</span>
@@ -303,10 +343,10 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-8 text-gold">КОНТАКТЫ</h2>
-              <p className="text-xl mb-8 text-white/90">
+              <p className="text-xl mb-8 text-neutral-200">
                 Расскажите про объект — рассчитаем стоимость и сроки. Работаем с юр. и физ. лицами.
               </p>
-              <div className="space-y-4 text-white/90">
+              <div className="space-y-4 text-neutral-300">
                 <p className="flex items-center">
                   <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Почта</span>
                   <a href="mailto:rekoveriplus@gmail.com" className="hover:text-gold transition-colors">
@@ -340,7 +380,7 @@ export default function Index() {
                   <input
                     type="text"
                     id="name"
-                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-white focus:outline-none focus:border-gold placeholder-white/30"
+                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500"
                     placeholder="ООО «Застройщик» / Иван"
                   />
                 </div>
@@ -351,7 +391,7 @@ export default function Index() {
                   <input
                     type="tel"
                     id="phone"
-                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-white focus:outline-none focus:border-gold placeholder-white/30"
+                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500"
                     placeholder="+7 (___) ___-__-__"
                   />
                 </div>
@@ -362,7 +402,7 @@ export default function Index() {
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-white focus:outline-none focus:border-gold placeholder-white/30"
+                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500"
                     placeholder="ЖК, площадь/метраж, что нужно сделать"
                   ></textarea>
                 </div>
@@ -383,16 +423,16 @@ export default function Index() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
             <img src={LOGO_URL} alt="РЕКОВЕРИ+" className="h-8 w-8 object-contain" />
-            <p className="text-sm text-white/60">© 2026 РЕКОВЕРИ+. Все права защищены.</p>
+            <p className="text-sm text-neutral-400">© 2026 РЕКОВЕРИ+. Все права защищены.</p>
           </div>
           <div className="flex space-x-8">
-            <a href="https://t.me/rekoveriplus" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
+            <a href="https://t.me/rekoveriplus" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               Telegram
             </a>
-            <a href="tel:+79251461487" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
+            <a href="tel:+79251461487" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               +7 (925) 146-14-87
             </a>
-            <a href="mailto:rekoveriplus@gmail.com" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
+            <a href="mailto:rekoveriplus@gmail.com" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               Почта
             </a>
           </div>
