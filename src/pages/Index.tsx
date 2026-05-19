@@ -93,12 +93,12 @@ export default function Index() {
     <main className="min-h-screen bg-ink text-neutral-300">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-ink/95 backdrop-blur border-b border-gold/30">
-        <div className="container mx-auto px-4 md:px-8 py-3 flex justify-between items-center">
-          <a href="/" className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="РЕКОВЕРИ+" className="h-12 w-12 object-contain" />
-            <div className="hidden sm:block">
-              <div className="text-lg font-bold tracking-widest text-gold">РЕКОВЕРИ+</div>
-              <div className="text-[10px] uppercase tracking-widest text-gold/60">Больше чем реставрация</div>
+        <div className="container mx-auto px-4 md:px-8 py-2 md:py-3 flex justify-between items-center">
+          <a href="/" className="flex items-center gap-2 sm:gap-3">
+            <img src={LOGO_URL} alt="РЕКОВЕРИ+" className="h-9 w-9 sm:h-12 sm:w-12 object-contain" />
+            <div>
+              <div className="text-base sm:text-lg font-bold tracking-widest text-gold leading-none">РЕКОВЕРИ+</div>
+              <div className="hidden sm:block text-[10px] uppercase tracking-widest text-gold/60 mt-1">Больше чем реставрация</div>
             </div>
           </a>
           <div className="hidden md:flex space-x-8">
@@ -117,7 +117,7 @@ export default function Index() {
           </div>
           <a
             href="#contact"
-            className="md:hidden px-4 py-2 bg-gold text-ink text-xs uppercase tracking-widest font-bold"
+            className="md:hidden px-3 py-2 bg-gold text-ink text-[11px] uppercase tracking-widest font-bold whitespace-nowrap"
           >
             Заявка
           </a>
@@ -125,43 +125,43 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 md:px-8 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 md:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-ink via-ink-soft to-ink pointer-events-none" />
         <div className="absolute top-1/4 -right-32 w-96 h-96 rounded-full bg-gold/10 blur-3xl pointer-events-none" />
         <div className="container mx-auto relative">
           <div className="grid grid-cols-12 gap-4 items-center">
-            <div className="col-span-12 md:col-span-7 mb-8 md:mb-0">
-              <div className="text-sm uppercase tracking-widest mb-6 text-gold">
+            <div className="col-span-12 md:col-span-7 order-2 md:order-1">
+              <div className="text-xs sm:text-sm uppercase tracking-widest mb-4 sm:mb-6 text-gold">
                 Москва и Московская область
               </div>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none mb-6 whitespace-nowrap">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none mb-4 sm:mb-6 whitespace-nowrap">
                 <span className="bg-gradient-to-b from-gold-light via-gold to-gold-dark bg-clip-text text-transparent">
                   РЕКОВЕРИ+
                 </span>
               </h1>
-              <p className="text-xl max-w-xl mb-4 text-neutral-200">
+              <p className="text-base sm:text-xl max-w-xl mb-3 sm:mb-4 text-neutral-200">
                 Специализированные работы на объектах жилого и коммерческого назначения.
               </p>
-              <p className="text-base text-neutral-300 max-w-xl">
+              <p className="text-sm sm:text-base text-neutral-300 max-w-xl">
                 Реставрация светопрозрачных конструкций, алюминиевого профиля, дверей и клининг остекления — для застройщиков и частных клиентов.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
                 <a
                   href="#contact"
-                  className="inline-block px-8 py-3 bg-gold text-ink text-sm uppercase tracking-widest font-bold hover:bg-gold-light transition-colors text-center"
+                  className="inline-block px-6 sm:px-8 py-3 bg-gold text-ink text-xs sm:text-sm uppercase tracking-widest font-bold hover:bg-gold-light transition-colors text-center"
                 >
                   Оставить заявку
                 </a>
                 <a
                   href="#projects"
-                  className="inline-block px-8 py-3 border-2 border-gold text-gold text-sm uppercase tracking-widest hover:bg-gold hover:text-ink transition-colors text-center"
+                  className="inline-block px-6 sm:px-8 py-3 border-2 border-gold text-gold text-xs sm:text-sm uppercase tracking-widest hover:bg-gold hover:text-ink transition-colors text-center"
                 >
                   Наши объекты
                 </a>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-5 flex items-center justify-center">
-              <div className="relative w-full max-w-md aspect-square">
+            <div className="col-span-12 md:col-span-5 flex items-center justify-center order-1 md:order-2 mb-4 md:mb-0">
+              <div className="relative w-48 sm:w-64 md:w-full md:max-w-md aspect-square">
                 <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent rounded-full blur-2xl" />
                 <img
                   src={LOGO_URL}
@@ -175,15 +175,15 @@ export default function Index() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 md:px-8 bg-ink-soft border-y border-gold/20">
+      <section className="py-12 sm:py-16 px-4 md:px-8 bg-ink-soft border-y border-gold/20">
         <div className="container mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, i) => (
-              <div key={i} className="border-l-2 border-gold pl-4">
-                <div className="text-4xl md:text-5xl font-bold tracking-tighter mb-2 text-gold">
+              <div key={i} className="border-l-2 border-gold pl-3 sm:pl-4">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter mb-1 sm:mb-2 text-gold">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm uppercase tracking-widest text-neutral-300">
+                <div className="text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-neutral-300">
                   {stat.label}
                 </div>
               </div>
@@ -193,23 +193,23 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 md:px-8 bg-ink">
+      <section id="services" className="py-12 sm:py-20 px-4 md:px-8 bg-ink">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12">
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter text-neutral-100">УСЛУГИ</h2>
-            <p className="text-sm uppercase tracking-widest text-gold mt-4 md:mt-0">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-8 sm:mb-12">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-neutral-100">УСЛУГИ</h2>
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-gold mt-3 md:mt-0">
               4 направления работ
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gold/30">
             {services.map((s, i) => (
-              <div key={i} className="bg-ink-soft p-8 md:p-10 group hover:bg-ink-mid transition-colors">
-                <div className="flex justify-between items-start mb-6">
-                  <span className="text-6xl font-bold tracking-tighter bg-gradient-to-b from-gold-light to-gold-dark bg-clip-text text-transparent">{s.num}</span>
+              <div key={i} className="bg-ink-soft p-6 sm:p-8 md:p-10 group hover:bg-ink-mid transition-colors">
+                <div className="flex justify-between items-start mb-4 sm:mb-6">
+                  <span className="text-5xl sm:text-6xl font-bold tracking-tighter bg-gradient-to-b from-gold-light to-gold-dark bg-clip-text text-transparent">{s.num}</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 tracking-tight text-neutral-100">{s.title}</h3>
-                <p className="text-neutral-300">{s.desc}</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 tracking-tight text-neutral-100">{s.title}</h3>
+                <p className="text-sm sm:text-base text-neutral-300">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -220,43 +220,32 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 md:px-8 bg-ink-soft">
+      <section id="projects" className="py-12 sm:py-20 px-4 md:px-8 bg-ink-soft">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12">
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter text-neutral-100">ОБЪЕКТЫ</h2>
-            <p className="text-sm uppercase tracking-widest text-gold mt-4 md:mt-0">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-8 sm:mb-12">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-neutral-100">ОБЪЕКТЫ</h2>
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-gold mt-3 md:mt-0">
               Топ работ
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-12 sm:mb-16">
             {topProjects.map((p, i) => (
-              <div key={i} className="group relative overflow-hidden bg-ink border border-gold/20 hover:border-gold hover:shadow-[0_0_30px_rgba(212,184,114,0.2)] transition-all">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent pointer-events-none" />
+              <div key={i} className="bg-ink border border-gold/20 border-l-4 border-l-gold p-5 sm:p-6 hover:border-gold hover:shadow-[0_0_30px_rgba(212,184,114,0.15)] transition-all">
+                <div className="text-[10px] sm:text-xs uppercase tracking-widest text-gold/80 mb-1">
+                  {p.type}
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <div className="text-[10px] uppercase tracking-widest text-gold mb-1">
-                    {p.type}
-                  </div>
-                  <div className="font-bold text-base leading-tight text-neutral-100">{p.name}</div>
-                </div>
+                <div className="font-bold text-base sm:text-lg text-neutral-100">{p.name}</div>
               </div>
             ))}
           </div>
 
-          <h3 className="text-2xl font-bold tracking-tighter mb-6 uppercase text-gold">Заказчики</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-gold/30">
+          <h3 className="text-xl sm:text-2xl font-bold tracking-tighter mb-4 sm:mb-6 uppercase text-gold">Заказчики</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-px bg-gold/30">
             {clients.map((c, i) => (
-              <div key={i} className="bg-ink p-6">
-                <div className="text-xl font-bold mb-2 text-gold">{c.name}</div>
-                <div className="text-sm text-neutral-300">{c.projects}</div>
+              <div key={i} className="bg-ink p-5 sm:p-6">
+                <div className="text-lg sm:text-xl font-bold mb-2 text-gold">{c.name}</div>
+                <div className="text-xs sm:text-sm text-neutral-300">{c.projects}</div>
               </div>
             ))}
           </div>
@@ -264,12 +253,12 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 md:px-8 bg-ink">
+      <section id="about" className="py-12 sm:py-20 px-4 md:px-8 bg-ink">
         <div className="container mx-auto">
-          <div className="grid grid-cols-12 gap-8">
+          <div className="grid grid-cols-12 gap-6 sm:gap-8">
             <div className="col-span-12 md:col-span-5">
-              <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-8 text-neutral-100">О НАС</h2>
-              <div className="aspect-[4/5] bg-ink-soft border border-gold/20 relative mb-8 md:mb-0 flex items-center justify-center p-12">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter mb-6 sm:mb-8 text-neutral-100">О НАС</h2>
+              <div className="aspect-square sm:aspect-[4/5] bg-ink-soft border border-gold/20 relative mb-6 md:mb-0 flex items-center justify-center p-8 sm:p-12 max-w-sm mx-auto md:max-w-none">
                 <img
                   src={LOGO_URL}
                   alt="РЕКОВЕРИ+"
@@ -278,17 +267,17 @@ export default function Index() {
               </div>
             </div>
             <div className="col-span-12 md:col-span-7 md:pt-24">
-              <p className="text-xl mb-6 text-neutral-200">
+              <p className="text-base sm:text-xl mb-4 sm:mb-6 text-neutral-200">
                 Компания РЕКОВЕРИ+ выполняет специализированные работы на объектах жилого и коммерческого назначения в Москве и Московской области.
               </p>
-              <p className="mb-6 text-neutral-300">
+              <p className="text-sm sm:text-base mb-4 sm:mb-6 text-neutral-300">
                 Работаем с топовыми застройщиками: Донстрой, Level Group, MR Group, Эталон, Гранель. Реализованы объекты на десятки тысяч метров профиля и тысячи квадратных метров остекления.
               </p>
-              <p className="mb-6 text-neutral-300">
+              <p className="text-sm sm:text-base mb-4 sm:mb-6 text-neutral-300">
                 Реставрация вместо замены — экономия бюджета объекта без потери качества. Работаем как с застройщиками на этапе сдачи, так и с управляющими компаниями и частными клиентами.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 mt-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-4 mt-8 sm:mt-12">
                 <div>
                   <h3 className="text-sm uppercase tracking-widest mb-3 text-gold">Принципы</h3>
                   <ul className="space-y-2 text-neutral-300">
@@ -338,35 +327,35 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 md:px-8 bg-gradient-to-br from-ink-soft via-ink to-ink-soft border-y border-gold/30">
+      <section id="contact" className="py-12 sm:py-20 px-4 md:px-8 bg-gradient-to-br from-ink-soft via-ink to-ink-soft border-y border-gold/30">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-8 text-gold">КОНТАКТЫ</h2>
-              <p className="text-xl mb-8 text-neutral-200">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter mb-6 sm:mb-8 text-gold">КОНТАКТЫ</h2>
+              <p className="text-base sm:text-xl mb-6 sm:mb-8 text-neutral-200">
                 Расскажите про объект — рассчитаем стоимость и сроки. Работаем с юр. и физ. лицами.
               </p>
-              <div className="space-y-4 text-neutral-300">
-                <p className="flex items-center">
-                  <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Почта</span>
-                  <a href="mailto:rekoveriplus@gmail.com" className="hover:text-gold transition-colors">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-neutral-300">
+                <p className="flex flex-col sm:flex-row sm:items-center">
+                  <span className="w-28 text-[10px] sm:text-sm uppercase tracking-widest text-gold/70 mb-1 sm:mb-0">Почта</span>
+                  <a href="mailto:rekoveriplus@gmail.com" className="hover:text-gold transition-colors break-all">
                     rekoveriplus@gmail.com
                   </a>
                 </p>
-                <p className="flex items-center">
-                  <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Телефон</span>
+                <p className="flex flex-col sm:flex-row sm:items-center">
+                  <span className="w-28 text-[10px] sm:text-sm uppercase tracking-widest text-gold/70 mb-1 sm:mb-0">Телефон</span>
                   <a href="tel:+79251461487" className="hover:text-gold transition-colors">
                     +7 (925) 146-14-87
                   </a>
                 </p>
-                <p className="flex items-center">
-                  <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Telegram</span>
+                <p className="flex flex-col sm:flex-row sm:items-center">
+                  <span className="w-28 text-[10px] sm:text-sm uppercase tracking-widest text-gold/70 mb-1 sm:mb-0">Telegram</span>
                   <a href="https://t.me/rekoveriplus" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
                     @rekoveriplus
                   </a>
                 </p>
-                <p className="flex items-center">
-                  <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Регион</span>
+                <p className="flex flex-col sm:flex-row sm:items-center">
+                  <span className="w-28 text-[10px] sm:text-sm uppercase tracking-widest text-gold/70 mb-1 sm:mb-0">Регион</span>
                   <span>Москва и Московская область</span>
                 </p>
               </div>
@@ -419,20 +408,20 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 md:px-8 bg-ink border-t border-gold/20">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <footer className="py-6 sm:py-8 px-4 md:px-8 bg-ink border-t border-gold/20">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <div className="flex items-center gap-3">
             <img src={LOGO_URL} alt="РЕКОВЕРИ+" className="h-8 w-8 object-contain" />
-            <p className="text-sm text-neutral-400">© 2026 РЕКОВЕРИ+. Все права защищены.</p>
+            <p className="text-xs sm:text-sm text-neutral-400">© 2026 РЕКОВЕРИ+. Все права защищены.</p>
           </div>
-          <div className="flex space-x-8">
-            <a href="https://t.me/rekoveriplus" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
+            <a href="https://t.me/rekoveriplus" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               Telegram
             </a>
-            <a href="tel:+79251461487" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
+            <a href="tel:+79251461487" className="text-xs sm:text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               +7 (925) 146-14-87
             </a>
-            <a href="mailto:rekoveriplus@gmail.com" className="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
+            <a href="mailto:rekoveriplus@gmail.com" className="text-xs sm:text-sm uppercase tracking-widest text-neutral-300 hover:text-gold transition-colors">
               Почта
             </a>
           </div>
