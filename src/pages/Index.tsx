@@ -102,11 +102,9 @@ export default function Index() {
               <div className="text-sm uppercase tracking-widest mb-6 text-gold">
                 Москва и Московская область
               </div>
-              <h1 className="text-7xl md:text-9xl font-bold tracking-tighter leading-none mb-6">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none mb-6 whitespace-nowrap">
                 <span className="bg-gradient-to-b from-gold-light via-gold to-gold-dark bg-clip-text text-transparent">
-                  РЕКО-
-                  <br />
-                  ВЕРИ+
+                  РЕКОВЕРИ+
                 </span>
               </h1>
               <p className="text-xl max-w-xl mb-4 text-white/90">
@@ -310,19 +308,25 @@ export default function Index() {
               </p>
               <div className="space-y-4 text-white/90">
                 <p className="flex items-center">
-                  <span className="w-24 text-sm uppercase tracking-widest text-gold/70">Почта</span>
-                  <a href="mailto:info@recovery-plus.ru" className="hover:text-gold transition-colors">
-                    info@recovery-plus.ru
+                  <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Почта</span>
+                  <a href="mailto:rekoveriplus@gmail.com" className="hover:text-gold transition-colors">
+                    rekoveriplus@gmail.com
                   </a>
                 </p>
                 <p className="flex items-center">
-                  <span className="w-24 text-sm uppercase tracking-widest text-gold/70">Телефон</span>
-                  <a href="tel:+74951234567" className="hover:text-gold transition-colors">
-                    +7 (495) 123-45-67
+                  <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Телефон</span>
+                  <a href="tel:+79251461487" className="hover:text-gold transition-colors">
+                    +7 (925) 146-14-87
                   </a>
                 </p>
                 <p className="flex items-center">
-                  <span className="w-24 text-sm uppercase tracking-widest text-gold/70">Регион</span>
+                  <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Telegram</span>
+                  <a href="https://t.me/rekoveriplus" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                    @rekoveriplus
+                  </a>
+                </p>
+                <p className="flex items-center">
+                  <span className="w-28 text-sm uppercase tracking-widest text-gold/70">Регион</span>
                   <span>Москва и Московская область</span>
                 </p>
               </div>
@@ -382,14 +386,14 @@ export default function Index() {
             <p className="text-sm text-white/60">© 2026 РЕКОВЕРИ+. Все права защищены.</p>
           </div>
           <div className="flex space-x-8">
-            <a href="#" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
+            <a href="https://t.me/rekoveriplus" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
               Telegram
             </a>
-            <a href="#" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
-              WhatsApp
+            <a href="tel:+79251461487" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
+              +7 (925) 146-14-87
             </a>
-            <a href="#" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
-              ВКонтакте
+            <a href="mailto:rekoveriplus@gmail.com" className="text-sm uppercase tracking-widest text-white/60 hover:text-gold transition-colors">
+              Почта
             </a>
           </div>
         </div>
