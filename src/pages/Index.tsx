@@ -1,8 +1,40 @@
+import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 const LOGO_URL = 'https://cdn.poehali.dev/projects/7678271b-9235-4f2a-849b-4c7fa8dd51ef/bucket/bdac1f1a-5fb6-42ee-9b0f-1f68acd6c6c8.png';
+const LEAD_URL = 'https://functions.poehali.dev/db6dbae3-f652-4e95-bfab-ea9d2369981f';
 
 export default function Index() {
+  const [form, setForm] = useState({ name: '', phone: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'ok' | 'error'>('idle');
+  const [errorText, setErrorText] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name.trim() && !form.phone.trim()) {
+      setStatus('error');
+      setErrorText('Укажите имя или телефон');
+      return;
+    }
+    setStatus('sending');
+    setErrorText('');
+    try {
+      const res = await fetch(LEAD_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || 'Не удалось отправить');
+      }
+      setStatus('ok');
+      setForm({ name: '', phone: '', message: '' });
+    } catch (err) {
+      setStatus('error');
+      setErrorText(err instanceof Error ? err.message : 'Ошибка отправки');
+    }
+  };
   const services = [
     {
       num: '01',
@@ -361,7 +393,7 @@ export default function Index() {
               </div>
             </div>
             <div>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name" className="block text-sm uppercase tracking-widest mb-2 text-gold/70">
                     Имя / Компания
@@ -369,7 +401,10 @@ export default function Index() {
                   <input
                     type="text"
                     id="name"
-                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500"
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    disabled={status === 'sending'}
+                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500 disabled:opacity-50"
                     placeholder="ООО «Застройщик» / Иван"
                   />
                 </div>
@@ -380,7 +415,10 @@ export default function Index() {
                   <input
                     type="tel"
                     id="phone"
-                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500"
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    disabled={status === 'sending'}
+                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500 disabled:opacity-50"
                     placeholder="+7 (___) ___-__-__"
                   />
                 </div>
@@ -391,16 +429,39 @@ export default function Index() {
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500"
+                    value={form.message}
+                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    disabled={status === 'sending'}
+                    className="w-full bg-transparent border-b-2 border-gold/40 py-2 px-0 text-neutral-100 focus:outline-none focus:border-gold placeholder-neutral-500 disabled:opacity-50"
                     placeholder="ЖК, площадь/метраж, что нужно сделать"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="mt-8 px-8 py-3 bg-gold text-ink text-sm uppercase tracking-widest font-bold hover:bg-gold-light transition-colors"
+                  disabled={status === 'sending'}
+                  className="mt-4 sm:mt-8 w-full sm:w-auto px-8 py-3 bg-gold text-ink text-sm uppercase tracking-widest font-bold hover:bg-gold-light transition-colors disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
                 >
-                  Отправить заявку
+                  {status === 'sending' ? (
+                    <>
+                      <Icon name="Loader2" size={16} className="animate-spin" />
+                      Отправка...
+                    </>
+                  ) : (
+                    'Отправить заявку'
+                  )}
                 </button>
+                {status === 'ok' && (
+                  <div className="flex items-start gap-2 text-sm text-gold border border-gold/40 bg-gold/5 p-3">
+                    <Icon name="CheckCircle2" size={18} className="flex-shrink-0 mt-0.5" />
+                    <span>Заявка отправлена. Мы свяжемся с вами в ближайшее время.</span>
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="flex items-start gap-2 text-sm text-red-300 border border-red-400/40 bg-red-500/10 p-3">
+                    <Icon name="AlertCircle" size={18} className="flex-shrink-0 mt-0.5" />
+                    <span>{errorText || 'Не удалось отправить заявку. Попробуйте ещё раз или напишите в Telegram.'}</span>
+                  </div>
+                )}
               </form>
             </div>
           </div>
