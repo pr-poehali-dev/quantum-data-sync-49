@@ -6,28 +6,24 @@ export default function Index() {
       num: '01',
       title: 'Реставрация светопрозрачных конструкций',
       desc: 'Шлифовка и полировка стекла — устранение царапин, потёртостей, следов цемента и клея после строительных работ',
-      price: 'от 6 900 ₽/м²',
       meta: 'Выработка 2 600–3 000 м² в месяц',
     },
     {
       num: '02',
       title: 'Реставрация алюминиевого профиля',
       desc: 'Восстановление геометрии, удаление царапин, полировка и покраска профиля стойка-ригель и оконных систем',
-      price: 'от 1 450 ₽/п.м',
       meta: 'Выработка 800–1 700 м.п в неделю',
     },
     {
       num: '03',
       title: 'Реставрация и ремонт дверных конструкций',
       desc: 'Восстановление дверных полотен и коробок: алюминий, стекло, фурнитура, регулировка',
-      price: 'индивидуально',
       meta: 'Выработка 10–20 дверей в день',
     },
     {
       num: '04',
       title: 'Клининг остекления и отделочные работы',
       desc: 'Профессиональный клининг светопрозрачных конструкций и внутренние отделочные работы на объекте',
-      price: 'индивидуально',
       meta: 'Жилые и коммерческие объекты',
     },
   ];
@@ -42,21 +38,21 @@ export default function Index() {
   const clients = [
     { name: 'Донстрой', projects: 'ЖК Остров, ЖК Река, ЖК Символ' },
     { name: 'Level Group', projects: 'Савинская, Стрешнего, Причальный, Мичуринский, Донской, Павелецкая, Войковская, Амурская, Академическая' },
-    { name: 'MR Group', projects: 'Павелецкая Сити — 41 600 м.п' },
-    { name: 'Эталон', projects: 'ЖК Шагал — 3 150 м²' },
-    { name: 'Гранель', projects: 'ЖК Май Приорити — 2 500 м²' },
-    { name: 'Прайм Парк', projects: '500 м²' },
+    { name: 'MR Group', projects: 'Павелецкая Сити' },
+    { name: 'Эталон', projects: 'ЖК Шагал' },
+    { name: 'Гранель', projects: 'ЖК Май Приорити' },
+    { name: 'Прайм Парк', projects: 'Премиум-объект' },
   ];
 
   const topProjects = [
-    { name: 'Level ЖК Причальный', volume: '48 000', unit: 'м.п', type: 'профиль' },
-    { name: 'MR Group Павелецкая Сити', volume: '41 600', unit: 'м.п', type: 'профиль' },
-    { name: 'Level ЖК Савинская 17', volume: '13 300', unit: 'м.п', type: 'профиль' },
-    { name: 'Level ЖК Павелецкая', volume: '12 400', unit: 'м.п', type: 'профиль' },
-    { name: 'Level ЖК Стрешнего', volume: '9 500', unit: 'м.п', type: 'профиль' },
-    { name: 'Донстрой ЖК Остров 4', volume: '7 000', unit: 'м.п', type: 'профиль' },
-    { name: 'Донстрой ЖК Остров 4/6', volume: '4 200', unit: 'м²', type: 'стекло' },
-    { name: 'Эталон ЖК Шагал', volume: '3 150', unit: 'м²', type: 'стекло' },
+    { name: 'Level ЖК Причальный', type: 'профиль' },
+    { name: 'MR Group Павелецкая Сити', type: 'профиль' },
+    { name: 'Level ЖК Савинская 17', type: 'профиль' },
+    { name: 'Level ЖК Павелецкая', type: 'профиль' },
+    { name: 'Level ЖК Стрешнего', type: 'профиль' },
+    { name: 'Донстрой ЖК Остров 4', type: 'профиль' },
+    { name: 'Донстрой ЖК Остров 4/6', type: 'стекло' },
+    { name: 'Эталон ЖК Шагал', type: 'стекло' },
   ];
 
   return (
@@ -170,9 +166,6 @@ export default function Index() {
               <div key={i} className="bg-white p-8 md:p-10 group hover:bg-black hover:text-white transition-colors">
                 <div className="flex justify-between items-start mb-6">
                   <span className="text-6xl font-bold tracking-tighter text-red-600">{s.num}</span>
-                  <span className="text-sm uppercase tracking-widest border border-current px-3 py-1">
-                    {s.price}
-                  </span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3 tracking-tight">{s.title}</h3>
                 <p className="text-neutral-600 group-hover:text-neutral-300 mb-4">{s.desc}</p>
@@ -183,7 +176,7 @@ export default function Index() {
             ))}
           </div>
           <p className="text-xs text-neutral-500 mt-6">
-            * НДС не облагается. Конечная стоимость обсуждается индивидуально с каждым Заказчиком.
+            * Стоимость обсуждается индивидуально с каждым Заказчиком.
           </p>
         </div>
       </section>
@@ -200,17 +193,11 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
             {topProjects.map((p, i) => (
-              <div key={i} className="bg-white border-l-4 border-red-600 p-6 flex justify-between items-center hover:shadow-lg transition-shadow">
-                <div>
-                  <div className="text-xs uppercase tracking-widest text-neutral-500 mb-1">
-                    {p.type}
-                  </div>
-                  <div className="font-bold text-lg">{p.name}</div>
+              <div key={i} className="bg-white border-l-4 border-red-600 p-6 hover:shadow-lg transition-shadow">
+                <div className="text-xs uppercase tracking-widest text-neutral-500 mb-1">
+                  {p.type}
                 </div>
-                <div className="text-right">
-                  <div className="text-3xl font-bold tracking-tighter">{p.volume}</div>
-                  <div className="text-xs uppercase tracking-widest text-neutral-500">{p.unit}</div>
-                </div>
+                <div className="font-bold text-lg">{p.name}</div>
               </div>
             ))}
           </div>
